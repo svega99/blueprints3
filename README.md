@@ -19,7 +19,7 @@
      ![Alt text](img/2.PNG)
       
 * Upload the application (mvn spring-boot: run), and rectify:
-  * That the page is accessible from: http://localhost:8080/index.html
+  * That the page is accessible from: http://localhost:8080/index.html .
   
 		Vista de la pagina sin funcionalidades por ahora.
 		
