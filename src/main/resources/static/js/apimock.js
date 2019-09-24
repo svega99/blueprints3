@@ -6,12 +6,21 @@ var apimock = (function () {
     mockdata["mateo"]=[{"author":"mateo","points":[{"x":4,"y":4},{"x":7,"y":6},{"x":11,"y":15},{"x":9,"y":10}],"name":"pintura"},];
 	mockdata["david"]=[{"author":"david","points":[{"x":0,"y":0},{"x":30,"y":0},{"x":15,"y":25}],"name":"triangulo"},];
 	
-    return {
-      getBlueprintsByAuthor: function (author, callback) {
+	var getBlueprintsByAuthor	= function (author, callback) {
         callback(
             mockdata[author]
         );
-      }
+      };
+	  
+	var getBlueprintsByNameAndAuthor = function (author, name, callback) {
+        callback(
+            mockdata[author], name
+        );
+      };
+	
+    return {
+      getBlueprintsByAuthor: getBlueprintsByAuthor,
+	  getBlueprintsByNameAndAuthor: getBlueprintsByNameAndAuthor
     };
   
   })();

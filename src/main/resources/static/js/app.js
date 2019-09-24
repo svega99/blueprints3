@@ -21,17 +21,68 @@ var Module =( function (){
 					
 				}
 				)
-				
+
 				document.getElementById("userPoints").innerHTML = numberpoints.reduce(sumaDePuntos);
 				
-				
+				var c=0;
 				objetos.map(function (obj){
 					var name = obj.name;
 					var numpoints = obj.n_points;
-					var fila = "<tr><td>" + name + "</td><td>" + numpoints + "</td></tr>";
-					$("#BP tbody").append(fila);
+
+					var fila = ["<tr><td id=\"planombre",c,"\">",name, "</td><td>",numpoints, "</td><td><button id=\"",name,"button\" type=\"button\" onclick=\"Module.porAutorYNombre(",c,")\">Open</button></td></tr>"]
+					var agregarfila=fila.join("");
+					$("#BP tbody").append(agregarfila);
+					c+=1;
 				})
             }
+	};
+	
+	
+	
+	
+	
+	var graficador = function(plano,nombre){
+		if (plano){
+			if (nombre){
+				var objeto = plano.map(function (plane){
+					if (plane.name==nombre){
+
+						return plane.points
+					}
+
+				}
+				)
+				objeto = objeto.filter(Boolean);
+
+				objeto=objeto[0];
+				var canvas = document.getElementById("blueprintDraw");
+				var ctx = canvas.getContext("2d");
+				
+				canvas.width=canvas.width;
+				
+				ctx.moveTo(0,0);
+
+				objeto.map(function (punto){
+					var x = punto.x;
+					var y = punto.y;
+					ctx.lineTo(x,y);
+					
+					
+					
+				})
+				ctx.stroke();
+				
+			}
+			
+		}
+		
+	};
+	
+	var porAutorYNombre = function(c){
+		var name =  document.getElementById("planombre"+c).innerText ;
+		var author = document.getElementById("author").value;
+		document.getElementById("planename").innerHTML = name;
+		apimock.getBlueprintsByNameAndAuthor(author,name,graficador);
 	};
 	
 	
@@ -43,6 +94,7 @@ var Module =( function (){
 		};
 	
 	return {
-		porAutor: porAutor
+		porAutor: porAutor,
+		porAutorYNombre: porAutorYNombre
 	};
 })();

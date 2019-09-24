@@ -79,3 +79,42 @@
 	Al ejecutar la aplicacion se comprueba su funcionalidad.
 
 	![Alt text](img/13.PNG)
+	
+	
+## Next Week
+*	To the page, add an element of type Canvas, with its respective identifier. Make your dimensions not too large to make room for the other components, but enough to be able to draw the plans.
+
+	Se añade un elemento de tipo canvas de 500x250
+
+	![Alt text](img/14.PNG)
+
+*	To the app.js module add an operation that, given the name of an author, and the name of one of its planes given as parameters, using the getBlueprintsByNameAndAuthor method of apimock.js and a callback function:
+
+	getBlueprintsByNameAndAuthor en apimock
+
+	![Alt text](img/15.PNG)
+
+	*	Consult the points of the corresponding plane, and with them, draw straight line segments, using the available HTML5 elements (Canvas, 2DContext, etc.)Update the field with jQuery where the name of the plane being drawn is shown (if that field does not exist, group it to the DOM). 
+	
+		Funcion que consulta los puntos de un plano dado y lo grafica
+	
+		![Alt text](img/16.PNG)
+		
+		![Alt text](img/17.PNG)
+		
+	
+*	Verify that the application now, in addition to displaying the list of the plans of an author, allows you to select one of these and graph it. To do this, have the button generated with the click event associated with the operation done in the last column (sending the corresponding names as a parameter).
+
+	En el momento en que se añaden datos a la tabla tambien añade un boton que permitira graficar el plano requerido
+	
+	![Alt text](img/18.PNG)
+
+*	Verify that the application now allows: consult the plans of an author and graph the one selected.
+
+	Al ejecutar la aplicacion se comprueba su funcionalidad.
+	
+	![Alt text](img/18.PNG)
+
+*	Once the application works (front-end only), make a module (call it apiclient) that has the same operations of the apimock, but for the same use real data consulted from the REST API. For the above, review how to make GET requests with jQuery, and how the callback scheme is handled in this context.
+*	Modify the app.js code so that it is possible to switch between the apimock and the apiclient with just one line of code.
+*	Review the documentation and examples of Bootstrap styles (already included in the exercise), add the necessary elements to the page to make it more colorful, and closer to the mock given at the beginning of the statement.
