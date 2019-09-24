@@ -113,7 +113,7 @@
 
 	Al ejecutar la aplicacion se comprueba su funcionalidad.
 	
-	![Alt text](img/18.PNG)
+	![Alt text](img/19.PNG)
 
 *	Once the application works (front-end only), make a module (call it apiclient) that has the same operations of the apimock, but for the same use real data consulted from the REST API. For the above, review how to make GET requests with jQuery, and how the callback scheme is handled in this context.
 *	Modify the app.js code so that it is possible to switch between the apimock and the apiclient with just one line of code.
