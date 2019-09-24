@@ -21,9 +21,9 @@
 * Upload the application (mvn spring-boot: run), and rectify:
   * That the page is accessible from: http://localhost:8080/index.html .
   
-		Vista de la pagina sin funcionalidades por ahora.
-		
-		![Alt text](img/3.PNG)
+	Vista de la pagina sin funcionalidades por ahora.
+	
+	![Alt text](img/3.PNG)
   
   * When you open the browser developer console, you should NOT receive 404 error messages (that is, the JavaScript libraries were loaded correctly).
 ## Frontend Logic
