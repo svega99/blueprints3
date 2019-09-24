@@ -2,7 +2,7 @@ var Module =( function (){
 	
 	var sumaDePuntos = function(total,num){
 		return total+num;
-	}
+	};
 	
 	var mapeador = function(plano){
 		if(plano){
@@ -33,6 +33,8 @@ var Module =( function (){
 				})
             }
 	};
+	
+	
 	
 	var porAutor = function(){
 			author = document.getElementById("author").value;
